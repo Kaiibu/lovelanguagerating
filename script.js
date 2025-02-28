@@ -4,14 +4,15 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, OAuthProvider, createUser
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
 // Firebase Configuration (Replace with your Firebase config)
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyCZK2Thpk5ySAR1xdl94D7MqLr1rAm0okY",
+    authDomain: "lovelanguagerating.firebaseapp.com",
+    projectId: "lovelanguagerating",
+    storageBucket: "lovelanguagerating.firebasestorage.app",
+    messagingSenderId: "386450885810",
+    appId: "1:386450885810:web:31ad4656e9e81d0c9e4dab",
+    measurementId: "G-6RH88610F4"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
