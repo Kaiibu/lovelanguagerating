@@ -5,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Language Rating</title>
     <script src="script.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .container { max-width: 500px; margin: auto; }
+        input, button { margin: 5px; padding: 10px; width: 90%; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Love Language Rating</h1>
+    <div class="container">
+        <h1>Rate Your Love Languages</h1>
+        <button onclick="signInWithGoogle()">Sign in with Google</button>
+        <button onclick="signInWithApple()">Sign in with Apple</button>
+        <form onsubmit="handleEmailSignIn(event)">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <div id="rating-section" style="display: none;">
+            <h2>Rate each Love Language</h2>
+            <div id="ratings">
+                <label>Words of Affirmation: <input type="number" id="words" min="1" max="5"></label><br>
+                <label>Acts of Service: <input type="number" id="service" min="1" max="5"></label><br>
+                <label>Receiving Gifts: <input type="number" id="gifts" min="1" max="5"></label><br>
+                <label>Quality Time: <input type="number" id="time" min="1" max="5"></label><br>
+                <label>Physical Touch: <input type="number" id="touch" min="1" max="5"></label><br>
+            </div>
+            <button onclick="submitRatings()">Submit</button>
+            <div id="result"></div>
+        </div>
+    </div>
 </body>
 </html>
